@@ -1,6 +1,11 @@
-name: Deploy
+name: Build
+
 on:
-  - repository_dispatch
+  push:
+    branches:
+      - main
+  repository_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
